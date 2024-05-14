@@ -1,5 +1,5 @@
 users: list[dict] = [
-    {'name': 'Jakub', 'surname': 'Orłowski', 'posts': 13},
+    {'name': 'Jakub', 'surname': 'Skrobała', 'posts': 13},
     {'name': 'Janek', 'surname': 'Mielec', 'posts': 20},
     {'name': 'Maciej', 'surname': 'Przybytek', 'posts': 45},
     {'name': 'Bartosz', 'surname': 'Pietrasik', 'posts': 60},
