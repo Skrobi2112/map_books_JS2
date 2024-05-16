@@ -60,9 +60,9 @@ def edytuj_uzytkownika():
     entry_nazwisko.insert(0, users[i].nazwisko)
     entry_posty.insert(0, users[i].posty)
     entry_miejscowosc.insert(0, users[i].miejscowosc)
-    button_dodaj_uzytkownika.config(text="Zapisz zmiany", command=lambda:aktualizuj_uzytkownika)
+    button_dodaj_uzytkownika.config(text="Zapisz zmiany", command=lambda:aktualizuj_uzytkownika(i))
 
-def aktualizuj_uzytkownika():
+def aktualizuj_uzytkownika(i):
     users[i].imie=entry_imie.get()
     users[i].nazwisko=entry_nazwisko.get()
     users[i].posty=entry_posty.get()
@@ -73,7 +73,7 @@ def aktualizuj_uzytkownika():
     entry_nazwisko.delete(0, END)
     entry_posty.delete(0, END)
     entry_miejscowosc.delete(0, END)
-    button_dodaj_uzytkownika.config(text="Dodajytkownika", command=dodaj_uzytkownika())
+    button_dodaj_uzytkownika.config(text="Dodajytkownika", command=dodaj_uzytkownika)
 
 
 root = Tk()
@@ -87,7 +87,7 @@ ramka_szczegoly_obiektu=Frame(root)
 
 ramka_lista_uzytkownikow.grid(row=0, column=0, padx=50)
 ramka_formularz.grid(row=0, column=1)
-ramka_szczegoly_obiektu.grid(row=1, column=0, columnspan=2, padx=50, pady=20)
+ramka_szczegoly_obiektu.grid(row=1, column=0, columnspan=2, padx=50, pady=50)
 
 #ramka_lista_obiektów
 label_lista_obiektow=Label(ramka_lista_uzytkownikow, text="Lista znajomych:")
